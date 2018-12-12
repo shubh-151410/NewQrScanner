@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" />
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:background="@color/actionbar_opacity"
+        android:minHeight="?attr/actionBarSize"
+        app:theme="@style/TransparentToolbar">
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:letterSpacing="-0.01"
+            android:layout_marginLeft="86dp"
+            android:textColor="@color/brownish_grey"
+            android:textSize="18sp"
+            tools:text="Scan Checkin QR" />
+    </android.support.v7.widget.Toolbar>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/btnSwitch"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@mipmap/noun_flash"
+        app:civ_border_width="1dp"
+        android:layout_marginTop="80dp"
+        app:civ_circle_background_color="@color/brownish_grey"
+        android:layout_marginLeft="150dp"
+        app:civ_border_color="@color/brownish_grey"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/btnSwitch"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="161dp"
+            android:layout_marginTop="7dp"
+            android:src="@mipmap/line" />
+    </RelativeLayout>
+
+</FrameLayout>
